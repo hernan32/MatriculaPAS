@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/generateCredential"
+        android:enabled="false"
+        android:title="@string/generar_credencial" />
+    <item
+        android:id="@+id/about"
+        android:title="@string/acerca_de" />
+    <item
+        android:id="@+id/exit"
+        android:title="@string/salir" />
+</menu>

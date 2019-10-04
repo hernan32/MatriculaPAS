@@ -1,0 +1,45 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.knobbers.matriculapas.Acerca"
+    android:paddingLeft="25dp"
+    android:paddingRight="25dp"
+    android:paddingBottom="5dp">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/logo_proteger_desc"
+        app:srcCompat="@drawable/ic_proteger" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:maxWidth="480dp"
+        android:text="@string/acerca_text"
+        android:textAlignment="center"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/ssn_logo_desc"
+        app:srcCompat="@drawable/ic_ssnvec_gray" />
+
+
+</LinearLayout>

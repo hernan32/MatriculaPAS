@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="horizontal"
+    tools:context="com.knobbers.matriculapas.MainActivity">
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="25dp"
+        android:background="@drawable/search_container"
+        android:elevation="2dp"
+        android:inputType="number"
+        android:queryHint="Ingrese Nº de Matricula">
+
+    </SearchView>
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/searchView"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="55dp"
+        android:checked="false"
+        android:showText="true"
+        android:switchPadding="5dp"
+        android:switchTextAppearance="@style/SwitchStyle"
+        android:text="@string/switch1_str"
+        android:textOff="@string/textoff"
+        android:textOn="@string/texton" />
+
+    <Switch
+        android:id="@+id/switch2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/switch1"
+        android:layout_below="@+id/switch1"
+        android:checked="false"
+        android:showText="true"
+        android:layout_marginRight="25dp"
+        android:switchPadding="5dp"
+        android:switchTextAppearance="@style/SwitchStyle"
+        android:text="@string/switch2_str"
+        android:textOff="@string/textoff"
+        android:textOn="@string/texton" />
+
+    <ScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/switch2"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="25dp"
+        android:background="#FFFFFF"
+        android:clipToPadding="false"
+        android:elevation="2dp"
+        android:fillViewport="false">
+
+        <TableLayout
+            android:id="@+id/datosTBL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/linea">
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/tv_izq_margin"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/n_matricula"
+                    android:textColor="@color/colorTexto"
+                    android:textSize="@dimen/size_izq" />
+
+                <TextView
+                    android:id="@+id/matriculaTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textColor="@color/colorTextoD"
+                    android:textSize="@dimen/size_der" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/linea">
+
+                <TextView
+                    android:id="@+id/textView0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/tv_izq_margin"
+                    android:text="@string/nombre"
+                    android:textColor="@color/colorTexto"
+                    android:textSize="@dimen/size_izq" />
+
+                <TextView
+                    android:id="@+id/nombreTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textColor="@color/colorTextoD"
+                    android:textSize="@dimen/size_der" />
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/linea">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/tv_izq_margin"
+                    android:text="@string/cuit"
+                    android:textColor="@color/colorTexto"
+                    android:textSize="@dimen/size_izq" />
+
+                <TextView
+                    android:id="@+id/cuitTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textColor="@color/colorTextoD"
+                    android:textSize="@dimen/size_der" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/linea">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/tv_izq_margin"
+                    android:text="@string/ramo"
+                    android:textColor="@color/colorTexto"
+                    android:textSize="@dimen/size_izq" />
+
+                <TextView
+                    android:id="@+id/ramoTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textColor="@color/colorTextoD"
+                    android:textSize="@dimen/size_der" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/linea">
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/tv_izq_margin"
+                    android:text="@string/domicilio"
+                    android:textColor="@color/colorTexto"
+                    android:textSize="@dimen/size_izq" />
+
+                <TextView
+                    android:id="@+id/domiTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textColor="@color/colorTextoD"
+                    android:textSize="@dimen/size_der" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/linea">
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/tv_izq_margin"
+                    android:text="@string/localidad"
+                    android:textColor="@color/colorTexto"
+                    android:textSize="@dimen/size_izq" />
+
+                <TextView
+                    android:id="@+id/localTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textColor="@color/colorTextoD"
+                    android:textSize="@dimen/size_der" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/linea">
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/tv_izq_margin"
+                    android:text="@string/provincia"
+                    android:textColor="@color/colorTexto"
+                    android:textSize="@dimen/size_izq" />
+
+                <TextView
+                    android:id="@+id/provTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textColor="@color/colorTextoD"
+                    android:textSize="@dimen/size_der" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/linea">
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/tv_izq_margin"
+                    android:text="@string/telefono"
+                    android:textColor="@color/colorTexto"
+                    android:textSize="@dimen/size_izq" />
+
+                <TextView
+                    android:id="@+id/telTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textColor="@color/colorTextoD"
+                    android:textSize="@dimen/size_der" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/tv_izq_margin"
+                    android:text="@string/email"
+                    android:textColor="@color/colorTexto"
+                    android:textSize="@dimen/size_izq" />
+
+                <TextView
+                    android:id="@+id/emailTV"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textColor="@color/colorTextoD"
+                    android:textSize="@dimen/size_der" />
+            </TableRow>
+
+        </TableLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
+
+
+
+
+

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="size_izq">18sp</dimen>
+    <dimen name="size_der">16sp</dimen>
+    <dimen name="switch_selector">10sp</dimen>
+</resources>
