@@ -30,7 +30,9 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import org.apache.commons.text.WordUtils;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -41,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
     private SearchView searchBox;
     private Switch switchSociety, switchDNI;
     private Boolean societySwitchState = false, DNISwitchState = false;
-    private int[] columWithNames, columWithData;
+    private int[] columWithData;
     private String[] newFields;
     private int rowsCount;
     private Boolean saveToPNG = false;
@@ -57,9 +59,9 @@ public class MainActivity extends AppCompatActivity {
         }
 
         //TABLE REFERENCES
-        TableLayout dataTable = (TableLayout) findViewById(R.id.datosTBL);
+        TableLayout dataTable = findViewById(R.id.datosTBL);
         rowsCount = dataTable.getChildCount();
-        columWithNames = new int[rowsCount];
+        int[] columWithNames = new int[rowsCount];
         columWithData = new int[rowsCount];
         for (int i = 0; i < rowsCount; i++) {
             TableRow row = (TableRow) dataTable.getChildAt(i);
@@ -71,9 +73,9 @@ public class MainActivity extends AppCompatActivity {
         newFields = new String[rowsCount];
 
         //GENERAL REFERENCES
-        searchBox = (SearchView) findViewById(R.id.searchView);
-        switchSociety = (Switch) findViewById(R.id.switch1);
-        switchDNI = (Switch) findViewById(R.id.switch2);
+        searchBox = findViewById(R.id.searchView);
+        switchSociety = findViewById(R.id.switch1);
+        switchDNI = findViewById(R.id.switch2);
 
         //FORCE - Search Animation
         searchBox.setOnClickListener(new View.OnClickListener() {
@@ -93,9 +95,14 @@ public class MainActivity extends AppCompatActivity {
                     DNISwitchState = false;
                     saveToPNG = false;
                     invalidateOptionsMenu();
-                }
+                    clearForm();
+                    searchBox.setQueryHint("Ingrese Nº de Sociedad");
+                    saveToPNG = false;
+                } else searchBox.setQueryHint("Ingrese Nº de Mat. de Matricula");
             }
         });
+
+
 
         //SWITCH "DNI"
         switchDNI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -105,7 +112,9 @@ public class MainActivity extends AppCompatActivity {
                 if (DNISwitchState) {
                     switchSociety.setChecked(false);
                     societySwitchState = false;
-                }
+                    clearForm();
+                    searchBox.setQueryHint("Ingrese Nº de DNI");
+                } else searchBox.setQueryHint("Ingrese Nº de Matricula");
             }
         });
 
@@ -119,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
         TextView tv = new TextView(getApplicationContext());
         RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(ActionBar.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.WRAP_CONTENT);
         tv.setLayoutParams(lp);
-        tv.setText("MATRICULAPAS");
+        tv.setText(R.string.app_name);
         tv.setTextSize(20);
         tv.setTextColor(Color.parseColor("#FFFFFF"));
         Typeface tf = Typeface.createFromAsset(getAssets(), "lovelo.otf");
@@ -160,13 +169,20 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onRestoreInstanceState(Bundle savedInstanceState) {
         newFields = savedInstanceState.getStringArray("SAVEDDATA");
-        if (newFields[0] != null && !newFields[0].equals("flag")) {
+        if (!newFields[0].equals("flag")) {
             fillTable(newFields);
             //Need to refill Search Box
             searchBox.setQuery(newFields[0], false);
             searchBox.setIconified(false);
             searchBox.clearFocus();
         }
+    }
+
+    private void clearForm () {
+        fillTable(new String[] {"","","","","","","","",""});
+        searchBox.setQuery("",false);
+        searchBox.setIconified(false);
+        searchBox.clearFocus();
     }
 
     //EXIT - onBack
@@ -293,7 +309,7 @@ public class MainActivity extends AppCompatActivity {
             //CHANGING TEXT
             TextView textData;
             for (int i = 0; i < rowsCount; i++) {
-                textData = (TextView) findViewById(columWithData[i]);
+                textData = findViewById(columWithData[i]);
                 textData.setText(fields[i]);
                 textData.startAnimation(in);
             }

@@ -28,11 +28,8 @@ public class Acerca extends AppCompatActivity {
                 overridePendingTransition(R.anim.right_in, R.anim.right_out);
                 return true;
             case (MotionEvent.ACTION_MOVE):
-                return true;
             case (MotionEvent.ACTION_UP):
-                return true;
             case (MotionEvent.ACTION_CANCEL):
-                return true;
             case (MotionEvent.ACTION_OUTSIDE):
                 return true;
             default:

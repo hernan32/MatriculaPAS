@@ -50,14 +50,13 @@ public class ClientHttpURLConnection {
         try (DataOutputStream wr = new DataOutputStream(conn.getOutputStream())) {
             wr.write(postData);
             wr.flush();
-            wr.close();
 
         }
 
         //READ WITH ENCODING - HttpURLConnection
         BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream(), "ISO_8859_1"));
         String inputLine;
-        StringBuffer response = new StringBuffer();
+        StringBuilder response = new StringBuilder();
         while ((inputLine = in.readLine()) != null) {
             response.append(inputLine);
         }
@@ -70,7 +69,7 @@ public class ClientHttpURLConnection {
         Document HTML = Jsoup.parse(responseText);
 
         //CHECK ERROR
-        Boolean errorInResponse = ((HTML.select("[role=alert]")).size()) > 0;
+        boolean errorInResponse = ((HTML.select("[role=alert]")).size()) > 0;
 
         //ARRAY DATA - Form
         String[] newFields = new String[9];
