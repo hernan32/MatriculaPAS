@@ -1,13 +1,13 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="com.knobbers.matriculapas"
-4    android:versionCode="1"
-5    android:versionName="1.0" >
+4    android:versionCode="2"
+5    android:versionName="2.0" >
 6
 7    <uses-sdk
 8        android:minSdkVersion="21"
 8-->C:\Users\Knobbers\AndroidStudioProjects\MatriculaPAS\app\src\main\AndroidManifest.xml
-9        android:targetSdkVersion="26" />
+9        android:targetSdkVersion="28" />
 9-->C:\Users\Knobbers\AndroidStudioProjects\MatriculaPAS\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
@@ -21,56 +21,45 @@
 14-->C:\Users\Knobbers\AndroidStudioProjects\MatriculaPAS\app\src\main\AndroidManifest.xml:8:5-28:19
 15        android:allowBackup="true"
 15-->C:\Users\Knobbers\AndroidStudioProjects\MatriculaPAS\app\src\main\AndroidManifest.xml:9:9-35
-16        android:debuggable="true"
-17        android:icon="@mipmap/ic_launcher"
-17-->C:\Users\Knobbers\AndroidStudioProjects\MatriculaPAS\app\src\main\AndroidManifest.xml:12:9-43
-18        android:label="@string/app_name"
-18-->C:\Users\Knobbers\AndroidStudioProjects\MatriculaPAS\app\src\main\AndroidManifest.xml:10:9-41
-19        android:roundIcon="@mipmap/ic_launcher"
-19-->C:\Users\Knobbers\AndroidStudioProjects\MatriculaPAS\app\src\main\AndroidManifest.xml:11:9-48
-20        android:supportsRtl="true"
-20-->C:\Users\Knobbers\AndroidStudioProjects\MatriculaPAS\app\src\main\AndroidManifest.xml:13:9-35
-21        android:theme="@style/AppTheme" >
-21-->C:\Users\Knobbers\AndroidStudioProjects\MatriculaPAS\app\src\main\AndroidManifest.xml:14:9-40
-22        <activity
-22-->C:\Users\Knobbers\AndroidStudioProjects\MatriculaPAS\app\src\main\AndroidManifest.xml:15:9-22:20
-23            android:name="com.knobbers.matriculapas.Intro"
-23-->C:\Users\Knobbers\AndroidStudioProjects\MatriculaPAS\app\src\main\AndroidManifest.xml:16:13-59
-24            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" >
-24-->C:\Users\Knobbers\AndroidStudioProjects\MatriculaPAS\app\src\main\AndroidManifest.xml:17:13-80
-25            <intent-filter>
-25-->C:\Users\Knobbers\AndroidStudioProjects\MatriculaPAS\app\src\main\AndroidManifest.xml:18:13-21:29
-26                <action android:name="android.intent.action.MAIN" />
-26-->C:\Users\Knobbers\AndroidStudioProjects\MatriculaPAS\app\src\main\AndroidManifest.xml:19:17-69
-26-->C:\Users\Knobbers\AndroidStudioProjects\MatriculaPAS\app\src\main\AndroidManifest.xml:19:25-66
-27
-28                <category android:name="android.intent.category.LAUNCHER" />
-28-->C:\Users\Knobbers\AndroidStudioProjects\MatriculaPAS\app\src\main\AndroidManifest.xml:20:17-77
-28-->C:\Users\Knobbers\AndroidStudioProjects\MatriculaPAS\app\src\main\AndroidManifest.xml:20:27-74
-29            </intent-filter>
-30        </activity>
-31        <activity android:name="com.knobbers.matriculapas.MainActivity" />
-31-->C:\Users\Knobbers\AndroidStudioProjects\MatriculaPAS\app\src\main\AndroidManifest.xml:23:9-75
-31-->C:\Users\Knobbers\AndroidStudioProjects\MatriculaPAS\app\src\main\AndroidManifest.xml:23:19-72
-32        <activity
-32-->C:\Users\Knobbers\AndroidStudioProjects\MatriculaPAS\app\src\main\AndroidManifest.xml:25:9-27:83
-33            android:name="com.knobbers.matriculapas.Acerca"
-33-->C:\Users\Knobbers\AndroidStudioProjects\MatriculaPAS\app\src\main\AndroidManifest.xml:26:13-60
-34            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
-34-->C:\Users\Knobbers\AndroidStudioProjects\MatriculaPAS\app\src\main\AndroidManifest.xml:27:13-80
-35
-36        <meta-data
-36-->[com.android.support:appcompat-v7:26.1.0] C:\Users\Knobbers\.gradle\caches\transforms-2\files-2.1\c589bb7ec2d841c67ae68a3682166223\appcompat-v7-26.1.0\AndroidManifest.xml:26:9-28:38
-37            android:name="android.support.VERSION"
-37-->[com.android.support:appcompat-v7:26.1.0] C:\Users\Knobbers\.gradle\caches\transforms-2\files-2.1\c589bb7ec2d841c67ae68a3682166223\appcompat-v7-26.1.0\AndroidManifest.xml:27:13-51
-38            android:value="26.1.0" />
-38-->[com.android.support:appcompat-v7:26.1.0] C:\Users\Knobbers\.gradle\caches\transforms-2\files-2.1\c589bb7ec2d841c67ae68a3682166223\appcompat-v7-26.1.0\AndroidManifest.xml:28:13-35
-39        <meta-data
-39-->[android.arch.lifecycle:runtime:1.0.0] C:\Users\Knobbers\.gradle\caches\transforms-2\files-2.1\d0f6449185399ce77e6ff49656abaac3\runtime-1.0.0\AndroidManifest.xml:25:9-27:47
-40            android:name="android.arch.lifecycle.VERSION"
-40-->[android.arch.lifecycle:runtime:1.0.0] C:\Users\Knobbers\.gradle\caches\transforms-2\files-2.1\d0f6449185399ce77e6ff49656abaac3\runtime-1.0.0\AndroidManifest.xml:26:13-58
-41            android:value="27.0.0-SNAPSHOT" />
-41-->[android.arch.lifecycle:runtime:1.0.0] C:\Users\Knobbers\.gradle\caches\transforms-2\files-2.1\d0f6449185399ce77e6ff49656abaac3\runtime-1.0.0\AndroidManifest.xml:27:13-44
-42    </application>
-43
-44</manifest>
+16        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
+16-->[com.android.support:support-compat:28.0.0] C:\Users\Knobbers\.gradle\caches\transforms-2\files-2.1\ccf94a4f227dfa4f17156620e28a8b98\support-compat-28.0.0\AndroidManifest.xml:22:18-91
+17        android:debuggable="true"
+18        android:icon="@mipmap/ic_launcher"
+18-->C:\Users\Knobbers\AndroidStudioProjects\MatriculaPAS\app\src\main\AndroidManifest.xml:12:9-43
+19        android:label="@string/app_name"
+19-->C:\Users\Knobbers\AndroidStudioProjects\MatriculaPAS\app\src\main\AndroidManifest.xml:10:9-41
+20        android:roundIcon="@mipmap/ic_launcher"
+20-->C:\Users\Knobbers\AndroidStudioProjects\MatriculaPAS\app\src\main\AndroidManifest.xml:11:9-48
+21        android:supportsRtl="true"
+21-->C:\Users\Knobbers\AndroidStudioProjects\MatriculaPAS\app\src\main\AndroidManifest.xml:13:9-35
+22        android:theme="@style/AppTheme" >
+22-->C:\Users\Knobbers\AndroidStudioProjects\MatriculaPAS\app\src\main\AndroidManifest.xml:14:9-40
+23        <activity
+23-->C:\Users\Knobbers\AndroidStudioProjects\MatriculaPAS\app\src\main\AndroidManifest.xml:15:9-22:20
+24            android:name="com.knobbers.matriculapas.Intro"
+24-->C:\Users\Knobbers\AndroidStudioProjects\MatriculaPAS\app\src\main\AndroidManifest.xml:16:13-59
+25            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" >
+25-->C:\Users\Knobbers\AndroidStudioProjects\MatriculaPAS\app\src\main\AndroidManifest.xml:17:13-80
+26            <intent-filter>
+26-->C:\Users\Knobbers\AndroidStudioProjects\MatriculaPAS\app\src\main\AndroidManifest.xml:18:13-21:29
+27                <action android:name="android.intent.action.MAIN" />
+27-->C:\Users\Knobbers\AndroidStudioProjects\MatriculaPAS\app\src\main\AndroidManifest.xml:19:17-69
+27-->C:\Users\Knobbers\AndroidStudioProjects\MatriculaPAS\app\src\main\AndroidManifest.xml:19:25-66
+28
+29                <category android:name="android.intent.category.LAUNCHER" />
+29-->C:\Users\Knobbers\AndroidStudioProjects\MatriculaPAS\app\src\main\AndroidManifest.xml:20:17-77
+29-->C:\Users\Knobbers\AndroidStudioProjects\MatriculaPAS\app\src\main\AndroidManifest.xml:20:27-74
+30            </intent-filter>
+31        </activity>
+32        <activity android:name="com.knobbers.matriculapas.MainActivity" />
+32-->C:\Users\Knobbers\AndroidStudioProjects\MatriculaPAS\app\src\main\AndroidManifest.xml:23:9-75
+32-->C:\Users\Knobbers\AndroidStudioProjects\MatriculaPAS\app\src\main\AndroidManifest.xml:23:19-72
+33        <activity
+33-->C:\Users\Knobbers\AndroidStudioProjects\MatriculaPAS\app\src\main\AndroidManifest.xml:25:9-27:83
+34            android:name="com.knobbers.matriculapas.Acerca"
+34-->C:\Users\Knobbers\AndroidStudioProjects\MatriculaPAS\app\src\main\AndroidManifest.xml:26:13-60
+35            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+35-->C:\Users\Knobbers\AndroidStudioProjects\MatriculaPAS\app\src\main\AndroidManifest.xml:27:13-80
+36    </application>
+37
+38</manifest>
