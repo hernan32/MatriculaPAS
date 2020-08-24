@@ -103,7 +103,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-
         //SWITCH "DNI"
         switchDNI.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -178,9 +177,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void clearForm () {
-        fillTable(new String[] {"","","","","","","","",""});
-        searchBox.setQuery("",false);
+    private void clearForm() {
+        fillTable(new String[]{"", "", "", "", "", "", "", "", ""});
+        searchBox.setQuery("", false);
         searchBox.setIconified(false);
         searchBox.clearFocus();
     }
