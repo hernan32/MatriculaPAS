@@ -93,3 +93,9 @@ output.json
 
 # End of https://www.gitignore.io/api/android
 /app/build/
+/gradle.properties
+/gradlew
+/gradlew.bat
+/settings.gradle
+/.idea/
+/build.gradle
