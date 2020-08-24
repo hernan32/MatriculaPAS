@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.support.v7.app.AppCompatActivity;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -38,15 +39,11 @@ public class Intro extends AppCompatActivity {
 
         //DELAY
         int SPLASH_SCREEN_TIME = 5000;
-        new Handler().postDelayed(new Runnable() {
-
-            public void run() {
-                Intent act = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(act);
-                overridePendingTransition(R.anim.left_in, R.anim.left_out); // (IN, OUT)
-                finish();
-            }
-
+        new Handler(Looper.getMainLooper()).postDelayed(() -> {
+            Intent act = new Intent(getApplicationContext(), MainActivity.class);
+            startActivity(act);
+            overridePendingTransition(R.anim.left_in, R.anim.left_out); // (IN, OUT)
+            finish();
         }, SPLASH_SCREEN_TIME);
     }
 
