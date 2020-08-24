@@ -99,3 +99,6 @@ output.json
 /settings.gradle
 /.idea/
 /build.gradle
+/app/src/androidTest/java/com/knobbers/matriculapas/
+/app/src/test/java/com/knobbers/matriculapas/
+/app/proguard-rules.pro
