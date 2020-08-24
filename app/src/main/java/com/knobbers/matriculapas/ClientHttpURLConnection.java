@@ -37,7 +37,7 @@ public class ClientHttpURLConnection {
         String urlParameters = "socpro=" + tipo + "&matricula=" + matricula + "&docNro=" + docNro;
         byte[] postData = urlParameters.getBytes(StandardCharsets.ISO_8859_1);
         int postDataLength = postData.length;
-        String request = "http://www.ssn.gob.ar/storage/registros/productores/productoresactivos.asp";
+        String request = "https://www.ssn.gob.ar/storage/registros/productores/productoresactivos.asp";
         URL url = new URL(request);
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         conn.setDoOutput(true);

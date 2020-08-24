@@ -92,4 +92,4 @@ output.json
 .cxx/
 
 # End of https://www.gitignore.io/api/android
-/app/
+/app/build/
