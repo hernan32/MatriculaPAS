@@ -1,10 +1,10 @@
 # MatriculaPAS
 
 
-La finalidad de esta utilidad es hacer llegar al usuario la facil comprobacion de la matricula del profesional. Esta herramienta no es oficial de la SSN, sin embargo los datos mostrados si lo son.
+La finalidad de esta utilidad es hacer llegar al usuario la fácil comprobación de la matricula del profesional. Esta herramienta no es oficial de la SSN, sin embargo los datos mostrados si lo son.
  
 ## Funciones:
-* Busqueda de datos del profesional/sociedad por matricula o DNI.
+* Búsqueda  de datos del profesional/sociedad por matricula o DNI.
 * Generación de Credencial (CIPAS) digital.
 
 ## Requisitos:
