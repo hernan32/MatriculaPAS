@@ -3,11 +3,11 @@
 
 La finalidad de esta utilidad es hacer llegar al usuario la facil comprobacion de la matricula del profesional. Esta herramienta no es oficial de la SSN, sin embargo los datos mostrados si lo son.
  
-##### Funciones:
+## Funciones:
 * Busqueda de datos del profesional/sociedad por matricula o DNI.
 * Generación de Credencial (CIPAS) digital.
 
-### Requisitos:
+## Requisitos:
 
 ```
 minSdkVersion 21
@@ -29,6 +29,6 @@ targetSdkVersion 30
 
 [MatriculaPAS](https://play.google.com/store/apps/details?id=com.knobbers.matriculapas)
 
-## Authors
+## Autor
 
 * **J. Hernán Di Bello** - [GitHub:hernan32](https://github.com/hernan32/)
