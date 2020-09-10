@@ -1,29 +1,34 @@
-# Foobar
+# MatriculaPAS
 
-Foobar is a Python library for dealing with word pluralization.
 
-## Installation
+La finalidad de esta utilidad es hacer llegar al usuario la facil comprobacion de la matricula del profesional. Esta herramienta no es oficial de la SSN, sin embargo los datos mostrados si lo son.
+ 
+##### Funciones:
+* Busqueda de datos del profesional/sociedad por matricula o DNI.
+* Generación de Credencial (CIPAS) digital.
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+### Requisitos:
 
-```bash
-pip install foobar
+```
+minSdkVersion 21
+targetSdkVersion 30
 ```
 
-## Usage
+## Tecnologias
 
-```python
-import foobar
+* [Gradle](https://gradle.org/) - Manejo de Dependencias
+* [Jsoup](https://jsoup.org/) - Parsing
+* [Apache Commons Lang](https://jsoup.org/) - Manejo de Cadena de Caracteres
+* [HttpURLConnection](https://developer.android.com/reference/java/net/HttpURLConnection) - Protocolo HTTP 
 
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
-```
+## Versionado
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+[GitHub](https://github.com/) para versionado. Para todas las versiones disponibles, mirar [aqui.](https://github.com/hernan32/MatriculaPAS)
 
-Please make sure to update tests as appropriate.
+## Google Play
 
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
+[MatriculaPAS](https://play.google.com/store/apps/details?id=com.knobbers.matriculapas)
+
+## Authors
+
+* **J. Hernán Di Bello** - [GitHub:hernan32](https://github.com/hernan32/)
